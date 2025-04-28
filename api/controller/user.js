@@ -27,6 +27,7 @@ router.post("/login", async (req, res) => {
       msg: "Fetch  user",
     });
   } catch (error) {
+    console.error("❌ REGISTER ERROR:", error); // <-- this will show you the real error
     res.status(400).send({ msg: "Internal Server Error" });
   }
 });
